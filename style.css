@@ -1,51 +1,92 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #ff0000;
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #000000;
+  background-image:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(70, 85, 110, 0.5) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(99, 102, 241, 0.4) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(181, 184, 208, 0.3) 0%,
+      transparent 80%
+    );
+  /* color: white; */
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-    gap: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  gap: 20px;
 }
-.container p{
-    font-weight: bold;
-    /* color: white; */
+.container p {
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 9px black;
 }
 
-.quote{
-    background-color: #fff;
-    padding: 45px;
-    text-align: center;
-    border-radius: 20px;
+.quote {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-    box-shadow: 0px -2px 12px 0px rgba(0,0,0,0.72);
+  padding: 45px;
+  text-align: center;
+  border-radius: 20px;
+
+  box-shadow: 0px -2px 12px 0px rgba(194, 194, 194, 0.479);
 }
-.quote button{
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 5px;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: none;
-    background-color: blue;
-    color: white;
-    transition: all 0.26s;
+.quote h1 {
+  color: white;
+  text-shadow: 1px 1px 9px black;
 }
- .quote button:hover{
-    background-color: #1d1dff;
-    cursor: pointer;
- }
-.quote button:active{
-    transform: scale(0.98);
-    margin-bottom: 1px;
-    margin-top: 44px;
+.quote button {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: blue;
+  color: white;
+  transition: all 0.26s;
+  box-shadow: 1px 0px 5px 0px #000000;
+}
+.quote button:hover {
+  background-color: #1d1dff;
+  cursor: pointer;
+}
+.quote button:active {
+  transform: scale(0.98);
+  margin-bottom: 1px;
+  margin-top: 44px;
+}
+
+
+
+/* Media Queries */
+@media all and (max-width: 600px) {
+    .quote {
+        width: 80%;
+    }
+    .container p {
+        width: 75%;
+    }
 }
