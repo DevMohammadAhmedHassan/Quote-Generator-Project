@@ -79,14 +79,13 @@ body {
   margin-top: 44px;
 }
 
-
-
 /* Media Queries */
 @media all and (max-width: 600px) {
-    .quote {
-        width: 80%;
-    }
-    .container p {
-        width: 75%;
-    }
+  .quote {
+    width: 80%;
+  }
+  .container p {
+    width: 75%;
+    text-align: center;
+  }
 }
